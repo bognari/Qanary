@@ -2,7 +2,7 @@ PARAMETERS="-Xms256M -Xmx715M -XX:MaxDirectMemorySize=256M -Djava.security.egd=f
 killall -9 java
 rm /home/services/stardog-4.1.1/system.lock
 /home/services/stardog-4.1.1/bin/stardog-admin server start --disable-security &>> log/stardog
-java $PARAMETERS -jar qanary_pipeline-template/target/qa.pipeline-1.1.0.jar &>> log/pipline &
+java $PARAMETERS -jar qanary_pipeline-template/target/qa.pipeline-1.1.1.jar &>> log/pipline &
 java $PARAMETERS -jar qanary_component-NERD-Alchemy/target/qa.NERD-Alchemy-1.0.0.jar &>> log/NERD-Alchemy &
 java $PARAMETERS -jar qanary_component-NED-AGDISTIS/target/qa.NED-AGDISTIS-1.0.0.jar &>> log/NED-Agdistis &
 java $PARAMETERS -jar qanary_component-NER-DBpedia-Spotlight/target/qa.NER-DBpedia-Spotlight-1.0.0.jar &>> log/NER-spotlight &
